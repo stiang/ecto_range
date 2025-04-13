@@ -99,7 +99,7 @@ defmodule EctoRange.Timestamp do
     if range.upper_inclusive do
       range
     else
-      %{range | upper_inclusive: true, upper: Date.add(range.upper, -1)}
+      %{range | upper_inclusive: true}
     end
   end
 
@@ -107,7 +107,7 @@ defmodule EctoRange.Timestamp do
     if range.lower_inclusive do
       range
     else
-      %{range | lower_inclusive: true, lower: Date.add(range.lower, 1)}
+      %{range | lower_inclusive: true}
     end
   end
 
